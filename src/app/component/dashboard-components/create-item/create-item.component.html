@@ -1,0 +1,12 @@
+<form class="m-3">
+    <div class="form-group">
+        <input type="text" #itemName  class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="text" #itemDescription  class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="text" #itemPrice class="form-control" />
+    </div>
+    <button class="btn btn-outline-primary" (click)="createItem(itemName.value, itemDescription.value, itemPrice.value); itemName.value=''; itemDescription.value=''; itemPrice.value=0;">Add Item</button>
+</form>

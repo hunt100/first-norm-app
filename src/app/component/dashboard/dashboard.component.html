@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="btn btn-success m-2" (click)="addItem('Component')">Add Component</div>
+    <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle m-2"
+                aria-controls="dropdown-basic">
+                Button dropdown <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" (click)="changeRef('component1');" >Component 1</a></li>
+          <li role="menuitem"><a class="dropdown-item" (click)="changeRef('component2');" >Component 2</a></li>
+          <li role="menuitem"><a class="dropdown-item" (click)="changeRef('component3');" >Component 3</a></li>
+        </ul>
+      </div>
+</div>
+<div class="gridster-size mt-3">
+<gridster [options]="options">
+    <gridster-item [item]="item" *ngFor="let item of dashboard; let i = index">
+        <p>{{arr[i]}} with index {{i}}</p>
+        <button class="btn btn-danger m-2" (mousedown)="removeItem(item, i)" (touchstart)="removeItem(item, i)">Destroy {{ i }}</button>
+        <app-general [innerComponent]="item.inn" [response]="response" [counter]="i"></app-general>
+        
+    </gridster-item>
+</gridster>
+</div>

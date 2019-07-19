@@ -1,0 +1,43 @@
+<div class="row m-2">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+        <input 
+        type="text" 
+        placeholder="Datepicker" 
+        class="form-control" 
+        bsDatepicker
+        [bsConfig]="bsConfig"
+        [bsValue]="bsValue"
+        [daysDisabled]="disabledDates"
+        placement="bottom" #dateBox/>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-outline-primary mx-2" (click)="getAllDates()">Show all dates</button>
+        <button class="btn btn-outline-info mx-2" (click)="check(dateBox.value)">Find Specific</button>
+    </div>
+</div>
+
+<div class="container" *ngIf="searchDate">
+    <p>id: {{searchDate.id}}</p>
+    <p>Date: {{searchDate.date}}</p>
+    <p>Date Description: {{searchDate.date_description}}</p>
+    <p>Date Type: {{searchDate.date_type}}</p>
+</div>
+
+<div class="container" *ngIf="response">
+    <div class="table table-striped">
+        <thead>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Date Description</th>
+            <th>Date Type</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let date of response">
+                <td>{{date.id}}</td>
+                <td>{{date.date}}</td>
+                <td>{{date.date_description}}</td>
+                <td>{{date.date_type}}</td>
+            </tr>
+        </tbody>
+    </div>
+</div>

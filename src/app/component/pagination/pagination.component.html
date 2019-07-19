@@ -1,0 +1,43 @@
+<div class="card text-center m3">
+    <h3 class="card-header">Many items with pagination</h3>
+    <div class="card-body">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-xl-2">Id</div>
+                <div class="col-xl-1">Avatar</div>
+                <div class="col-xl-2">Login</div>
+                <div class="col-xl-5">Html_url</div>
+                <div class="col-xl-2">Type</div>
+            </div>
+        </div>
+        <div class="container" *ngFor="let user of githubUsers">
+            <div class="row my-2">
+                <div class="col-xl-2">
+                    <p>{{user.id}}</p>
+                </div>
+                <div class="col-xl-1">
+                    <img src="{{user.avatar_url}}" alt="{{user.avatar_url}}" class="rounded img-fluid" />
+                </div>
+                <div class="col-xl-2">
+                    <p>{{user.login}}</p>
+                </div>
+                <div class="col-xl-5">
+                    <a href="{{user.html_url}}">Link to {{user.login}} profile</a>
+                </div>
+                <div class="col-xl-2">
+                    <p>Type: {{user.type}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 mx-auto mt-2">
+                    <pagination  [totalItems]="totalItems" (pageChanged)="pageChanged($event)" [boundaryLinks]="showBoundaryLinks"
+                    previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;" [itemsPerPage]="pageSize"></pagination>
+                </div>
+            </div>
+            </div>
+    </div>
+    <div class="card-footer pb-0 pt-3">
+    </div>
+</div>

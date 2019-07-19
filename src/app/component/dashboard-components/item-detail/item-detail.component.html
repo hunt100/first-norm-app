@@ -1,0 +1,21 @@
+<div class="container" *ngIf="selectedItem">
+    <h1 class="display-2">{{selectedItem.itemName | uppercase}}</h1>
+    <p>Short Description:{{selectedItem.itemDescription}}</p>
+    <p>Item Price: {{selectedItem.itemPrice}}</p>
+    <button class="btn btn-outline-primary btn-lg" (click)="changeToggleBehave(false)">Back</button>
+
+    <form>
+        <label for="name"> Item Name:
+            <input type="text" name="name" [(ngModel)]="selectedItem.itemName"/>
+        </label>
+        <label for="desc">Item Description:
+            <input type="text" name="desc" [(ngModel)]="selectedItem.itemDescription"/>
+        </label>
+
+        <label for="price">Item price:
+            <input type="text" name="price" [(ngModel)]="selectedItem.itemPrice"/>
+        </label>
+
+        <button class="btn btn-outline-warning btn-lg" (click)="save();">Update</button>
+    </form>
+</div>

@@ -1,0 +1,5 @@
+<div [ngSwitch]="innerComponent">
+    <app-chart-pie *ngSwitchCase="'component1'"   [response]="response" [counter]="counter"></app-chart-pie>
+    <app-get-items *ngSwitchCase="'component2'"   [response]="response"></app-get-items>
+    <app-create-item *ngSwitchCase="'component3'" [response]="response"></app-create-item>
+</div>
