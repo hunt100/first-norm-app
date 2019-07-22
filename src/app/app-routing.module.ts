@@ -8,6 +8,7 @@ import { UpdateUserComponent } from './component/update-user/update-user.compone
 import { NotFoundComponent } from './component/not-found/not-found.component';
 import { PaginationComponent } from './component/pagination/pagination.component';
 import { DateSearchComponent } from './component/date-search/date-search.component';
+import { ConfigComponent } from './component/config/config.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'users/:id', component: UpdateUserComponent},
   {path: 'pages', component: PaginationComponent},
   {path: 'date', component: DateSearchComponent},
+  {path: 'config', component: ConfigComponent},
   {path:'**', component: NotFoundComponent}
   // {path: 'dashboard/detail/:id', component: ItemDetailComponent}
 
