@@ -4,7 +4,6 @@ import { QuestionService } from 'src/app/service/question.service';
 @Component({
   selector: 'app-show-dynamic-form',
   templateUrl: './show-dynamic-form.component.html',
-  styleUrls: ['./show-dynamic-form.component.css'],
   providers: [QuestionService]
 })
 export class ShowDynamicFormComponent implements OnInit {
