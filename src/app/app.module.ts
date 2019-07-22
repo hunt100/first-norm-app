@@ -25,6 +25,9 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { DateSearchComponent } from './component/date-search/date-search.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DynamicFormComponent } from './component/dynamic-form/dynamic-form.component';
+import { DynamicFormQuestionComponent } from './component/dynamic-form-question/dynamic-form-question.component';
+import { ShowDynamicFormComponent } from './component/show-dynamic-form/show-dynamic-form.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NotFoundComponent,
     PaginationComponent,
     DateSearchComponent,
+    DynamicFormComponent,
+    DynamicFormQuestionComponent,
+    ShowDynamicFormComponent,
     
   ],
   imports: [
