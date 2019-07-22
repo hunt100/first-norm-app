@@ -1,12 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { QuestionBase } from 'src/app/question-base';
+import { QuestionBase } from 'src/app/dynamic-form-class/question-base';
 import { FormGroup } from '@angular/forms';
 import { QuestionControlService } from 'src/app/service/question-control.service';
 
 @Component({
   selector: 'app-dynamic-form',
   templateUrl: './dynamic-form.component.html',
-  styleUrls: ['./dynamic-form.component.css'],
   providers: [QuestionControlService]
 })
 export class DynamicFormComponent implements OnInit {
