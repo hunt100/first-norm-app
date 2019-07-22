@@ -1,0 +1,19 @@
+<div class="container">
+    <h3>Get configuration from JSON response</h3>
+    <button class="btn btn-outline-primary mx-2" (click)="clear(); showConfig();">ConfigV1</button>
+    <button class="btn btn-outline-primary mx-2" (click)="clear(); showConfigV2();">ConfigV2</button>
+    <button class="btn btn-outline-primary mx-2" (click)="clear(); showConfigResponse();">Config with Headers</button>
+    <button class="btn btn-outline-primary mx-2" (click)="clear(); makeError();">Error response</button>
+    <button class="btn btn-outline-primary mx-2" (click)="clear();">Clear</button>
+    <div *ngIf="config">
+        <p>Current api url : {{config.apiUrl}}</p>
+        <p>TextFile url: {{config.textfile}}</p>
+        <div *ngIf="headers">
+            <p>Response Headers:</p>
+            <ul>
+                <li *ngFor="let header of headers">{{header}}</li>
+            </ul>
+        </div> 
+    </div>
+    <p *ngIf="error" class="alert alert-danger mt-2">{{error | json}}</p>
+</div>

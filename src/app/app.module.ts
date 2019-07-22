@@ -28,6 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DynamicFormComponent } from './component/dynamic-form/dynamic-form.component';
 import { DynamicFormQuestionComponent } from './component/dynamic-form-question/dynamic-form-question.component';
 import { ShowDynamicFormComponent } from './component/show-dynamic-form/show-dynamic-form.component';
+import { ConfigComponent } from './component/config/config.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ShowDynamicFormComponent } from './component/show-dynamic-form/show-dyn
     DynamicFormComponent,
     DynamicFormQuestionComponent,
     ShowDynamicFormComponent,
+    ConfigComponent,
     
   ],
   imports: [
