@@ -12,7 +12,7 @@ import { Item } from 'src/app/model/item';
 export class DashboardComponent implements OnInit {
   options: GridsterConfig;
   dashboard: Array<GridsterItem>;
-
+  searchItems: Item[];
   static itemChange(item, itemComponent): void {
     console.info('item changed', item, itemComponent);
   }
@@ -75,6 +75,12 @@ export class DashboardComponent implements OnInit {
             console.log(this.response);
           });
   }
+
+    search(searchTerm: string) {
+      if (searchTerm) {
+        this.itemService.searchItem(searchTerm).subscribe( seitem => this.searchItems = seitem);
+      }
+    }
 
   
 

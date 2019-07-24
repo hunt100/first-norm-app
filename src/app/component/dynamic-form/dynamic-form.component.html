@@ -1,7 +1,7 @@
 <div>
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
 
-        <div *ngFor = "let question of questions" class="form-row">
+        <div *ngFor = "let question of questions" class="form-row form-group">
             <app-dynamic-form-question [question]="question" [form]="form"></app-dynamic-form-question>
         </div>
 
