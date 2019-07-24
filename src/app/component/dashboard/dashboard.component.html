@@ -1,4 +1,19 @@
 <div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-5">
+                <label>Item name:
+                    <input type="text" #itemName class="form-control" />
+                </label>
+                    <button class="btn btn-outline-info ml-2 btn-sm" (click)="search(itemName.value)">Search</button>
+            </div>
+        </div>
+        <ul class="list-group">
+            <li *ngFor="let item of searchItems" class="list-group-item list-group-item-success">
+                <p>{{item.id}} - {{item.itemName}} - {{item.itemDescription}} - {{item.itemPrice}}</p>
+            </li>
+        </ul>
+    </div>
     <div class="btn btn-success m-2" (click)="addItem('Component')">Add Component</div>
     <div class="btn-group" dropdown>
         <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle m-2"

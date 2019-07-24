@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="form-group">
+        <input (keyup)="search($event.target.value)" id="name" placeholder="Search..." class="form-control"/>
+        <input type="checkbox" id="refresh" [checked]="withRefresh" (click)="toggleRefresh()" class="mx-2">
+        <label for="refresh">with refresh <span class="text-danger">dead (CORB)</span></label>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li *ngFor="let package of packages$| async let odd = odd" class="list-group-item" [class.list-group-item-primary]="odd">
+            <b>{{package.name}} v. {{package.version}}</b>
+            <small> {{package.description}}</small>
+        </li>
+    </ul>
+</div>

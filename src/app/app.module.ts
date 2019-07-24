@@ -29,6 +29,11 @@ import { DynamicFormComponent } from './component/dynamic-form/dynamic-form.comp
 import { DynamicFormQuestionComponent } from './component/dynamic-form-question/dynamic-form-question.component';
 import { ShowDynamicFormComponent } from './component/show-dynamic-form/show-dynamic-form.component';
 import { ConfigComponent } from './component/config/config.component';
+import { MessageComponent } from './component/message/message.component';
+import { DownloaderTextComponent } from './component/downloader-text/downloader-text.component';
+import { PackageServiceComponent } from './component/package-service/package-service.component';
+import { httpInterceptorProviders } from './http-interceptors';
+import { UploaderComponent } from './component/uploader/uploader.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,10 @@ import { ConfigComponent } from './component/config/config.component';
     DynamicFormQuestionComponent,
     ShowDynamicFormComponent,
     ConfigComponent,
+    MessageComponent,
+    DownloaderTextComponent,
+    PackageServiceComponent,
+    UploaderComponent,
     
   ],
   imports: [
@@ -67,7 +76,9 @@ import { ConfigComponent } from './component/config/config.component';
     BsDatepickerModule.forRoot(),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
